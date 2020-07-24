@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="monday_graphql_api" name="Monday GraphQL API" schema_version="1.0" version="1">
+    <author>support@kineticdata.com</author>
+    <description>
+        Use to read data via the Monday.com GraphQL API
+    </description>
+    <helpurl></helpurl>
+    <visible>true</visible>
+    <deferrable>false</deferrable>
+    <parameters>
+        <parameter id="error_handling" label="Error Handling" required="true" tooltip="Determine what to return if an error is encountered." menu="Error Message,Raise Error">Error Message</parameter>
+        <parameter id="query" label="GraphQL Query" required="false" tooltip="The GraphQL query or mutation to preform (should start with the query or mutation keyword) "/>
+        <parameter id="variables" label="GraphQL Variables" required="false" tooltip="The GraphQL Variables Object"/>
+    </parameters>
+    <handler name="monday_graphql_api" version="1">
+        <infos>
+            <info name="api_token">&lt;%= @info['api_token'] %&gt;</info>
+            <info name="enable_debug_logging">&lt;%= @info['enable_debug_logging'] %&gt;</info>
+        </infos>
+        <parameters>
+            <parameter name="error_handling">&lt;%= @parameters.has_key?("error_handling") ?
+                @parameters["error_handling"] : "Raise Error" %&gt;</parameter>
+            <parameter name="query">&lt;%= @parameters["query"] %&gt;</parameter>
+            <parameter name="variables">&lt;%= @parameters["variables"] %&gt;</parameter>
+        </parameters>
+    </handler>
+    <results format="xml">
+        <result name="Handler Error Message"/>
+        <result name="Data"/>
+    </results>
+</taskDefinition>

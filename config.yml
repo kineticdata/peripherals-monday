@@ -1,0 +1,12 @@
+---
+repo-name: peripherals-kinetic-platform
+categories:
+- Service Management
+- Request Management
+- CRM
+- DevOps
+- Ticketing
+display-name: Kinetic Platform
+manufacturer: Kinetic Data
+product:
+description: The peripheral components for use with the Kinetic Platform.

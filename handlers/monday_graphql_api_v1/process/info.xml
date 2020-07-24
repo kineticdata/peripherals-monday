@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskInfo version="1.0">
+  <info name="enable_debug_logging" description="Debug Logging Enabled">false</info>
+  <info name="api_token" description="Monday API v2 Token">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</info>
+</taskInfo>
