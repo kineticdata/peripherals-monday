@@ -1,12 +1,8 @@
 ---
-repo-name: peripherals-kinetic-platform
+repo-name: peripherals-monday
 categories:
-- Service Management
-- Request Management
-- CRM
-- DevOps
-- Ticketing
-display-name: Kinetic Platform
-manufacturer: Kinetic Data
+- Project Management
+display-name: Monday
+manufacturer: Monday.com
 product:
-description: The peripheral components for use with the Kinetic Platform.
+description: A project management tool that enables organizations to manage tasks, projects, and team work.
